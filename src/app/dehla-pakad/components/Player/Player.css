@@ -1,0 +1,249 @@
+/* General player image styling */
+.player-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 15px; /* Space between image and cards */
+}
+
+@media (max-width: 768px) {
+  .player-image {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Player info */
+.player-info {
+  font-size: 1rem;
+  color: #fff;
+  margin-right: 20px; /* Space between name and cards */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .player-info {
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+}
+
+/* General player layout for all players (image left, card right in a row) */
+.player-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px;
+}
+
+/* Player cards layout */
+.player-cards {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative; /* To enable the overlapping effect */
+  white-space: nowrap; /* Prevent wrapping of cards */
+  overflow-x: auto; /* Enable horizontal scrolling if cards overflow */
+}
+
+/* For the current player, ensure cards stay in a row without wrapping */
+.current-player {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap; /* Prevent wrapping of cards */
+  overflow-x: auto; /* Enable horizontal scrolling if cards overflow */
+}
+
+/* Basic card styling for current player */
+button.card {
+  width: 50px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #333;
+  position: relative;
+  padding: 5px;
+  margin: 0; /* No margin to avoid default spacing between cards */
+  transition: transform 0.2s ease-in-out;
+  z-index: 1;
+  overflow: hidden; /* Hide content overflow */
+}
+
+@media (max-width: 768px) {
+  button.card {
+    width: 40px;
+    height: 60px;
+  }
+}
+
+/* Hover effect for current player */
+button.card:hover {
+  transform: scale(1.05);
+}
+
+/* Make non-playing players' cards smaller */
+.non-current-player button.card {
+  width: 35px;
+  height: 50px;
+  border-radius: 6px;
+  opacity: 0.7;
+  cursor: not-allowed;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .non-current-player button.card {
+    width: 30px;
+    height: 45px;
+  }
+}
+
+/* Overlap effect: push each card to the left for stronger overlapping */
+button.card:not(:first-child) {
+  margin-left: -30px; /* Negative margin for overlap */
+}
+
+@media (max-width: 768px) {
+  button.card:not(:first-child) {
+    margin-left: -25px;
+  }
+}
+
+/* Suits in the corners */
+.card-suit-corner {
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: inherit; /* Inherit suit color (red/black) */
+}
+
+/* Top-left corner */
+.card-suit-corner.top-left {
+  top: 5px;
+  left: 5px;
+}
+
+/* Bottom-right corner */
+.card-suit-corner.bottom-right {
+  bottom: 5px;
+  right: 5px;
+}
+
+/* Large light suit in the center */
+.card-suit-large {
+  position: absolute;
+  font-size: 4rem; /* Large size */
+  color: rgba(0, 0, 0, 0.1); /* Light color */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the suit */
+  z-index: 1;
+}
+
+/* Card value displayed in the center over the large suit */
+.card-value-center {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure the value is above the large suit */
+}
+
+@media (max-width: 768px) {
+  .card-value-center {
+    font-size: 1rem;
+  }
+  .card-suit-large {
+    font-size: 3rem;
+  }
+}
+
+/* Red card suits: hearts and diamonds */
+button.card.hearts .card-suit-corner,
+button.card.diamonds .card-suit-corner {
+  color: red;
+}
+
+button.card.hearts .card-suit-large,
+button.card.diamonds .card-suit-large {
+  color: rgba(255, 0, 0, 0.1); /* Light red for large suit */
+}
+
+/* Black card suits: spades and clubs */
+button.card.spades .card-suit-corner,
+button.card.clubs .card-suit-corner {
+  color: black;
+}
+
+button.card.spades .card-suit-large,
+button.card.clubs .card-suit-large {
+  color: rgba(0, 0, 0, 0.1); /* Light black for large suit */
+}
+
+/* Specific layout for top player */
+.player-top {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .player-top {
+    top: 5px;
+  }
+}
+
+/* Specific layout for bottom player */
+.player-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .player-bottom {
+    bottom: 5px;
+  }
+}
+
+/* Specific layout for left player */
+.player-left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .player-left {
+    left: 5px;
+  }
+}
+
+/* Specific layout for right player */
+.player-right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 768px) {
+  .player-right {
+    right: 5px;
+  }
+}
+
+/* Current player card styling */
+.current-player button.card {
+  border: 3px solid #ffcc00; /* Highlight for the current player */
+  background-color: #fffae6;
+  z-index: 2; /* Ensure the current player's card is on top */
+}

@@ -1,0 +1,27 @@
+/* Scoreboard styling */
+.scoreboard {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333; /* Add a background for better visibility */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.team h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.team p {
+  margin: 2px 0 0 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}

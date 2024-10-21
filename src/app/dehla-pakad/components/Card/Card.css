@@ -1,0 +1,74 @@
+/* Card layout with suits in corners and a big suit in the center */
+
+button.card {
+  width: 70px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 2px solid #333;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+button.card:hover {
+  transform: scale(1.05);
+}
+
+/* Corner styling for top-left and bottom-right */
+.corner {
+  position: absolute;
+  font-size: 0.75rem;
+}
+
+.corner.top-left {
+  top: 0px;
+  left: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.corner.bottom-right {
+  bottom: 2px;
+  right: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Center large suit */
+.center-value-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center-value {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.card-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  opacity: 0.1; /* Lightly faded for the center suit */
+}
+/* Styling for card value and suit */
+.card-value {
+  font-size: 8px;
+  font-weight: lighter;
+  margin-right: 2px;
+  margin-top: -3px;
+}
+
+.card-suit {
+  font-size: 10px;
+  font-weight: lighter;
+}
