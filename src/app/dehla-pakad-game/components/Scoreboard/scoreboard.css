@@ -1,0 +1,68 @@
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a raised effect */
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff; /* White background for each team */
+}
+
+.team h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.team .score {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  color: #555;
+}
+
+.separator {
+  margin: 0 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Highlight the leading team */
+.leading {
+  background-color: #ffeb3b; /* Yellow background to highlight the leading team */
+  box-shadow: 0 0 10px rgba(255, 235, 59, 0.5); /* Subtle yellow glow */
+}
+
+@media (max-width: 600px) {
+  .scoreboard {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .separator {
+    margin: 10px 0;
+  }
+
+  .team {
+    padding: 15px;
+  }
+
+  .team h3 {
+    font-size: 1.3rem;
+  }
+
+  .team .score {
+    font-size: 1.8rem;
+  }
+}

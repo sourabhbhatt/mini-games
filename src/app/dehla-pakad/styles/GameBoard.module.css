@@ -1,0 +1,138 @@
+.board {
+  background-image: url("/casino-bg.webp");
+  border-width: 5px;
+  border-color: #c2a420;
+}
+
+/* Bottom Player (Player 1, positioned at the bottom) */
+.bottomPlayer {
+  grid-row: 3; /* Bottom row */
+  grid-column: 2; /* Center column */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left Player (Player 2, positioned on the left side) */
+.leftPlayer {
+  grid-row: 2; /* Center row */
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top Player (Player 3, positioned at the top) */
+.topPlayer {
+  grid-row: 1; /* Top row */
+  grid-column: 2; /* Center column */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right Player (Player 4, positioned on the right side) */
+.rightPlayer {
+  grid-row: 2; /* Center row */
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Playing area in the center */
+.centerBoard {
+  grid-row: 2;
+  grid-column: 2; /* Middle of the grid */
+  background-color: #004d80; /* Lighter blue for the playing area */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.centerBoard h1 {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* Center board cards */
+.centerBoard {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #004d80; /* Light blue for the playing area */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.trickCards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cardInPlay {
+  position: absolute;
+  width: 60px;
+  height: 90px;
+  background-color: white;
+  border: 2px solid #f2b01e;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.horizontalCard {
+  transform: rotate(0deg);
+}
+
+.verticalCard {
+  transform: rotate(90deg);
+}
+
+/* Positioning the cards to be cluttered */
+.cardInPlay:nth-child(1) {
+  top: 40%;
+  left: 40%;
+  z-index: 1;
+}
+
+.cardInPlay:nth-child(2) {
+  top: 35%;
+  left: 45%;
+  z-index: 2;
+}
+
+.cardInPlay:nth-child(3) {
+  top: 30%;
+  left: 50%;
+  z-index: 3;
+}
+
+.cardInPlay:nth-child(4) {
+  top: 45%;
+  left: 35%;
+  z-index: 4;
+}
+
+.cardInPlay:nth-child(5) {
+  top: 50%;
+  left: 30%;
+  z-index: 5;
+}
+
+/* You can continue adding more nth-child rules for additional cards */

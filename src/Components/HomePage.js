@@ -19,49 +19,49 @@ const HomePage = () => {
           title={"Tic Tac Toe"}
           gameTitle={"Tic Tac Toe"}
           screenToNavigate={"tictactoe"}
-          thumbnail={"/TicTacToe/TicTacToeGif.gif"}
+          thumbnail={"/tic-tac-toe.jpg"}
         />
         <GameCard
           subtitle={"Solo"}
           title={"Typing Test"}
           gameTitle={"Typing Test"}
           screenToNavigate={"typingTest"}
-          thumbnail={"/TypeTest/TypeTestGif.gif"}
+          thumbnail={"/typing.jpg"}
         />
-        <GameCard
+        {/* <GameCard
           subtitle={"Hang man game"}
           title={"HangMan"}
           gameTitle={"HangMan"}
           screenToNavigate={"hangman"}
           thumbnail={"/TypeTest/TypeTestGif.gif"}
-        />
+        /> */}
         <GameCard
           subtitle={"memory game"}
           title={"Memory Game"}
           gameTitle={"Memory Game"}
           screenToNavigate={"memoryGame"}
-          thumbnail={"/TypeTest/TypeTestGif.gif"}
+          thumbnail={"/cube.png"}
         />
         <GameCard
           subtitle={"Mine game"}
           title={"Mine Game"}
           gameTitle={"Mine Game"}
           screenToNavigate={"mineGame"}
-          thumbnail={"/TypeTest/TypeTestGif.gif"}
+          thumbnail={"/mineGame.jpeg"}
         />
-        <GameCard
+        {/* <GameCard
           subtitle={"Dehla-Pakad"}
           title={"Dehla-Pakad"}
           gameTitle={"Dehla-Pakad"}
           screenToNavigate={"Dehla-Pakad"}
           thumbnail={"/TypeTest/TypeTestGif.gif"}
-        />
+        /> */}
         <GameCard
           subtitle={"Dehla-Pakad"}
           title={"Dehla-Pakad"}
           gameTitle={"Dehla-Pakad"}
           screenToNavigate={"dehla-pakad"}
-          thumbnail={"/TypeTest/TypeTestGif.gif"}
+          thumbnail={"/playingcards.png"}
         />
       </div>
     </div>

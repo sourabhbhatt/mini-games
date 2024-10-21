@@ -8,6 +8,7 @@ export default function GameCard({
   title = "Tic Tac Toe",
   gameTitle = "Tic Tac Toe",
   subtitle = "1 v 1",
+  id = "gif",
 }) {
   const router = useRouter();
   return (
@@ -20,7 +21,7 @@ export default function GameCard({
         <Image
           alt="Card background"
           className="object-cover"
-          id="gif"
+          id={id}
           classNames={{
             img: "rounded-[10px] md:rounded-[13px]  scale-[1.04] group-hover:scale-1 group-hover:rounded-b-sm transition-all ease-out duration-200",
           }}
