@@ -60,26 +60,6 @@ const GameBoard = () => {
         </div>
 
         {/* Center Area (the playing board itself) */}
-        {/* <div className="relative row-start-2 col-start-2 w-[200px] h-[200px] flex justify-center items-center shadow-inner shadow-[inset_0_0_10px_rgba(255,255,255,0.1)] md:w-[300px] md:h-[300px]">
-          <div className="relative w-full h-full">
-            {currentTrick.map((card, index) => (
-              <div
-                key={index}
-                className={`absolute w-[50px] h-[70px] bg-white border-2 border-[#f2b01e] rounded-lg flex justify-center items-center shadow-lg ${
-                  index % 2 === 0 ? "rotate-0" : "rotate-90"
-                }`}
-                style={{
-                  top: `${40 - index * 5}%`,
-                  left: `${40 + index * 5}%`,
-                  zIndex: index + 1,
-                }}
-              >
-                <Card suit={card.suit} value={card.value} />
-              </div>
-            ))}
-          </div>
-        </div> */}
-
         <div className="relative row-start-2 col-start-2 w-[150px] h-[150px] flex justify-center items-center shadow-inner shadow-[inset_0_0_10px_rgba(255,255,255,0.1)] md:w-[225px] md:h-[225px]">
           <div className="relative w-full h-full">
             {currentTrick.map((card, index) => {
@@ -129,6 +109,7 @@ const GameBoard = () => {
             })}
           </div>
         </div>
+
         {/* Top Player (Player 3 from Team A) */}
         <div className="row-start-1 col-start-2 flex flex-col items-center justify-center">
           <PlayerHand
