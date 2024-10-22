@@ -1,16 +1,22 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
+import Card from "./Card";
+import DiscardPile from "./DiscardPile";
 
 const Scoreboard = ({ team = "A" }) => {
   // Access the teams' data and scores from the Redux store
   const { teams } = useSelector((state) => state.game);
+  const teamA = teams.teamA;
+  const teamB = teams.teamB;
 
   // Get team names and scores
   const teamAName = "Team A";
-  const teamAScore = teams.teamA.score;
+  const teamAScore = teamA.score;
   const teamBName = "Team B";
-  const teamBScore = teams.teamB.score;
+  const teamBScore = teamB.score;
+  const collectedCards =
+    team === "A" ? teamA.collectedCards : teamB.collectedCards;
 
   // Determine which team is leading
   const isTeamALeading = teamAScore > teamBScore;
@@ -47,6 +53,7 @@ const Scoreboard = ({ team = "A" }) => {
       } flex flex-col items-center`}
     >
       <div className={ropeStyle}></div>
+
       <motion.div
         className={`flex flex-col items-center p-4 ${
           team === "A" ? teamAColor : teamBColor
@@ -64,6 +71,13 @@ const Scoreboard = ({ team = "A" }) => {
           {team === "A" ? teamAScore : teamBScore}
         </p>
       </motion.div>
+      <div
+        className={`absolute top-[-30px] ${
+          team === "A" ? "left-20" : "right-20"
+        } flex flex-col items-center`}
+      >
+        <DiscardPile currentTrick={collectedCards || []} />
+      </div>
     </div>
   );
 };
