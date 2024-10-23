@@ -73,7 +73,7 @@ const Scoreboard = ({ team = "A" }) => {
       </motion.div>
       <div
         className={`absolute top-[-30px] ${
-          team === "A" ? "left-20" : "right-20"
+          team === "A" ? "left-10" : "right-10"
         } flex flex-col items-center`}
       >
         <DiscardPile currentTrick={collectedCards || []} />
