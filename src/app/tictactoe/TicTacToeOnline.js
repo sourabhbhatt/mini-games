@@ -7,18 +7,19 @@ import {
   calculateWinner,
   isDraw,
 } from "./TicTacToeLogic";
-import Ring from "@/app/tictactoe/TicTacToeComponents/Ring";
-import Cross from "@/app/tictactoe/TicTacToeComponents/Cross";
+import Ring from "./TicTacToeComponents/Ring";
+import Cross from "./TicTacToeComponents/Cross";
 import Confetti from "react-confetti";
 import { Button } from "@nextui-org/button";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import generateAnonymousToken from "@/../server/helper/webSocketHelper";
+// import generateAnonymousToken from "@/../server/helper/webSocketHelper";
 
 const secret = process.env.NEXT_PUBLIC_JWT_SECRET || "test";
 
-const token = generateAnonymousToken({ secret });
+// const token = generateAnonymousToken({ secret });
+const token = "";
 
 const socket = io(`${process.env.NEXT_PUBLIC_SERVER_URL}/tictactoe`, {
   auth: {

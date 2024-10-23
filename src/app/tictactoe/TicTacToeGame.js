@@ -1,6 +1,5 @@
 "use client";
-import Ring from "@/app/tictactoe/TicTacToeComponents/Ring";
-import Cross from "@/app/tictactoe/TicTacToeComponents/Cross";
+
 import React, { useEffect, useState } from "react";
 import { Button } from "@nextui-org/button";
 import Confetti from "react-confetti";
@@ -10,6 +9,8 @@ import {
   calculateWinner,
   isDraw,
 } from "./TicTacToeLogic";
+import Cross from "./TicTacToeComponents/Cross";
+import Ring from "./TicTacToeComponents/Ring";
 
 export default function TicTacToeGame() {
   const [turn, setTurn] = useState(true); // here we use false for "X" player and true for "O" player

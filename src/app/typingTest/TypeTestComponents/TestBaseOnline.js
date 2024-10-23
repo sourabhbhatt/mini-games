@@ -10,11 +10,12 @@ import { useRef, useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import MemoizedTypeTestResults from "./TypeTestResults";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
-import generateAnonymousToken from "@/../server/helper/webSocketHelper";
+// import generateAnonymousToken from "@/../server/helper/webSocketHelper";
 
 const secret = process.env.NEXT_PUBLIC_JWT_SECRET || "test";
 
-const token = generateAnonymousToken({ secret });
+// const token = generateAnonymousToken({ secret });
+const token = "";
 
 const socket = io(`${process.env.NEXT_PUBLIC_SERVER_URL}/typetest`, {
   auth: {
