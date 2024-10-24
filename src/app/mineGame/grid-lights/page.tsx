@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "~~/lib/utils";
+
 import { Settings } from "./_components/settings";
+import { cn } from "../../../lib/utils";
 
 export type ConfigType = {
   gridItems: Array<number | null>;

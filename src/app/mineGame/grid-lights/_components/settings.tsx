@@ -4,14 +4,15 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "~~/components/ui/sheet";
+} from "../../../../UI/sheet";
 
 import { Settings2 } from "lucide-react";
-import { Button } from "~~/components/ui/button";
-import { Input } from "~~/components/ui/input";
-import { Label } from "~~/components/ui/label";
-import { Switch } from "~~/components/ui/switch";
+import { Button } from "../../../../UI/button";
+import { Input } from "../../../../UI/input";
+import { Label } from "../../../../UI/label";
+
 import { ConfigType } from "../page";
+import { Switch } from "../../../../UI/switch";
 
 export function Settings({
   config,

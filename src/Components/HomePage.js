@@ -19,14 +19,14 @@ const HomePage = () => {
           title={"Tic Tac Toe"}
           gameTitle={"Tic Tac Toe"}
           screenToNavigate={"tictactoe"}
-          thumbnail={"/tic-tac-toe.jpg"}
+          thumbnail={"/zeroKata.png"}
         />
         <GameCard
           subtitle={"Solo"}
           title={"Typing Test"}
           gameTitle={"Typing Test"}
           screenToNavigate={"typingTest"}
-          thumbnail={"/typing.jpg"}
+          thumbnail={"/type.png"}
         />
         {/* <GameCard
           subtitle={"Hang man game"}
