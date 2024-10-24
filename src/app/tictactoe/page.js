@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Switch } from "@nextui-org/react";
 import { Tooltip } from "@nextui-org/react";
 import TicTacToeGame from "./TicTacToeGame";
-import TicTacToeOnline from "./TicTacToeOnline";
+// import TicTacToeOnline from "./TicTacToeOnline";
 import {
   Modal,
   ModalContent,
@@ -161,13 +161,13 @@ export default function Page() {
           </div>
         )}
         {gameMode === "offline" && <TicTacToeGame />}
-        {gameMode === "online" && (
+        {/* {gameMode === "online" && (
           <TicTacToeOnline
             playerName={playerName}
             gameRoomId={gameRoomId}
             currentAction={currentAction}
           />
-        )}
+        )} */}
       </div>
     </>
   );

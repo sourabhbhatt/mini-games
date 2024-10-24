@@ -16,14 +16,14 @@ export default function LeaderBoard() {
   const [loading, setLoading] = useState(true);
 
   async function LoadLeaderBoard() {
-    const getScores = await fetch("/api/games/leaderboard", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const topScores = await getScores.json();
-    setSCores(topScores.memoryScores);
+    // const getScores = await fetch("/api/games/leaderboard", {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
+    // const topScores = await getScores.json();
+    // setSCores(topScores.memoryScores);
     setLoading(false);
   }
 

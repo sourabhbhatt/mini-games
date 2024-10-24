@@ -17,7 +17,7 @@ import {
   Link,
 } from "@nextui-org/react";
 import TestBase from "./TypeTestComponents/TestBase";
-import TestBaseOnline from "./TypeTestComponents/TestBaseOnline";
+// import TestBaseOnline from "./TypeTestComponents/TestBaseOnline";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -166,13 +166,13 @@ export default function Home() {
         </div>
       )}
       {gameMode === "offline" && <TestBase />}
-      {gameMode === "online" && (
+      {/* {gameMode === "online" && (
         <TestBaseOnline
           playerName={playerName}
           gameRoomId={gameRoomId}
           currentAction={currentAction}
         />
-      )}
+      )} */}
     </div>
   );
 }

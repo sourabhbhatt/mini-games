@@ -115,26 +115,25 @@ export default function MemoryGame() {
     if (totalMoves < bestScore) {
       setBestScore(totalMoves);
     }
-    const postScore = await fetch("/api/games/memory", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ game: "Memory", score: totalMoves }),
-    });
+    // const postScore = await fetch("/api/games/memory", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ game: "Memory", score: totalMoves }),
+    // });
 
-    const data = await postScore.json();
+    // const data = await postScore.json();
   }
 
   async function getHighScore() {
-    const getScore = await fetch("/api/games/memory", {
-      method: "GET",
-    });
-
-    const data = await getScore.json();
-    if (data.success && data.message) {
-      setBestScore(data.message.score);
-    }
+    // const getScore = await fetch("/api/games/memory", {
+    //   method: "GET",
+    // });
+    // const data = await getScore.json();
+    // if (data.success && data.message) {
+    //   setBestScore(data.message.score);
+    // }
   }
 
   function playSound(direction: string) {
