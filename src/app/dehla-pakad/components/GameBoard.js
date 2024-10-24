@@ -1,5 +1,5 @@
 import {
-  resetWinner,
+  // resetWinner,
   shuffleAndDealCards,
   selectDealer,
 } from "../redux/slices/gameSlice";
@@ -26,9 +26,9 @@ const GameBoard = () => {
   const currentPlayer = (team, playerIndex) =>
     turn === team.players[playerIndex].id;
 
-  if (winningPlayerId && currentTrick.length === 0) {
-    setTimeout(() => dispatch(resetWinner()), 2000);
-  }
+  // if (winningPlayerId && currentTrick.length === 0) {
+  //   setTimeout(() => dispatch(resetWinner()), 2000);
+  // }
 
   return (
     <div className="p-4 cursor-pointer flex justify-center">
